@@ -1,0 +1,25 @@
+﻿body {
+    background-color: sandybrown;
+    text-align: center;
+    background-image: url(https://i.gifer.com/Tvth.gif);
+}
+
+.nomeArt {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.descArt {
+    font-size: 10px;
+}
+.priceArt {
+    font-weight: bold;
+}
+.imgArt {
+    width: 100px;
+    height: 100px;
+}
+.detailsImg {
+    width: 100px;
+    height: 100px;
+}

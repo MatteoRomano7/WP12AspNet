@@ -110,5 +110,13 @@ namespace Ecommerce
                 }
             }
         }
+
+        protected void btnClearSession_Click(object sender, EventArgs e)
+        {
+
+            Session.Clear();
+
+            LoadCartItems();
+        }
     }
 }

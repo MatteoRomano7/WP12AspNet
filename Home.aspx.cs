@@ -20,18 +20,19 @@ namespace Ecommerce
                 SqlDataReader dataReader = cmd.ExecuteReader();
 
                 string content = "";
-                if (dataReader.HasRows )
+                if (dataReader.HasRows)
                 {
                     while (dataReader.Read())
                     {
                         content += $@"<div class=""card col-6 col-sm-4 col-md-3 "">
-                                          <img src=""{dataReader["Image"]}"" class=""card-img-top"" alt=""{dataReader["Nome"]}"">
-                                          <div class=""card-body"">
-                                              <h5 class=""card-title"">{dataReader["Nome"]}</h5>
-                                              <p class=""card-text"">{dataReader["Descrizione"]}</p>
-                                               <a href=""Dettaglio.aspx?product={dataReader["ID"]}"" class=""btn btn-primary"">Dettaglio</a>
-                                           </div>
-                                           </div>";
+                                        <img src=""{dataReader["Image"]}"" class=""card-img-top m-auto imgArt "" alt=""{dataReader["Nome"]}"">
+                                        <div class=""card-body"">
+                                        <h5 class=""card-title nomeArt"">{dataReader["Nome"]}</h5>
+                                        <p class=""card-text descArt"">{dataReader["Descrizione"]}</p>
+                                        <p class=""card-text priceArt"">{dataReader["Prezzo"]}€</p>
+                                        <a href=""Dettaglio.aspx?product={dataReader["ID"]}"" class=""btn btn-success"">Dettaglio</a>
+                                        </div>
+                                       </div>";
                     }
                 }
 
@@ -42,7 +43,7 @@ namespace Ecommerce
             {
                 Response.Write(ex.ToString());
             }
-            finally 
+            finally
             {
                 if (DBConn.conn.State == ConnectionState.Open)
                 {

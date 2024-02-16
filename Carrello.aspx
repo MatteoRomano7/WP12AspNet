@@ -15,5 +15,5 @@
          </ItemTemplate>
      </asp:Repeater>
  </ul>
-
+<asp:Button runat="server" ID="btnClearSession" CssClass="btn btn-danger" Text="Svuota Carrello" OnClick="btnClearSession_Click" />
 </asp:Content>
